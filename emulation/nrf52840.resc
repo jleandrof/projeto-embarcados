@@ -4,7 +4,11 @@
 using sysbus
 
 mach create
-machine LoadPlatformDescription @emulation/nrf52840.repl
+#machine LoadPlatformDescription @emulation/nrf52840.repl
+
+machine LoadPlatformDescriptionFromString """using "emulation/nrf52840.repl" bme680: I2C.BME280@ i2c0 0x76"""
+
+#machine LoadPlatformDescriptionFromString """using "emulation/nrf52840.repl" bme680: I2C.BME280@ i2c0 0x77"""
 
 $bin?=@build/zephyr/zephyr.elf
 

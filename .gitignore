@@ -1,6 +1,13 @@
 # editors
 *.swp
 *~
+*.vscode
 
 # build
 /build*/
+
+# logs
+*.log
+
+# misc
+/emulation/Misc/
